@@ -6,4 +6,54 @@
 
 .collapse {
   visibility: visible !important;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
+
+.about_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .contact_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .about_container {
+    flex-direction: column;
+  }
+  .about-area {
+    display: flex;
+    justify-content: center;
+  }
+  .mapouter-address {
+    display: flex;
+    align-items: center;
+    width: auto;
+  }
+  .col-xl-auto {
+    padding-left: 0px;
+  }
+  .partner-item {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .about-area {
+    display: flex;
+    justify-content: center;
+  }
+  .mapouter-address {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+}
