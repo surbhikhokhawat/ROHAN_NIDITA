@@ -1,1 +1,0 @@
-# koltepatil-liferepublic
