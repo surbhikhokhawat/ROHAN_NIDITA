@@ -61,7 +61,7 @@
     <nav class="navbar navbar-b navbar-trans navbar-expand-lg" id="mainNav">
       <div class="container mx-auto">
         <a class="navbar-brand js-scroll" href="index-2.html">
-          <img src="assets/img/PNG1.png" alt="">
+          <img src="assets/img/rohan-logo.jpg" alt="">
         </a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
           aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,15 +78,20 @@
             <li class="nav-item">
               <a class="nav-link js-scroll" href="#highlights">Project Highlights</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll" href="#project">Location Insights</a>
+            <li class="nav-item" style="padding-left: 0;">
+              <button class="nav-link js-scroll" href="#project" id="formbutton" data-toggle="modal"
+                data-target="#floor-modal">See Floor Plans</button>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll" href="#blog">Amenities</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link js-scroll" href="#location">Location Insights</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link js-scroll" href="#contact">Contact</a>
             </li>
+
           </ul>
         </div>
       </div>
@@ -95,45 +100,12 @@
   <!-- End Header Navbar Area -->
 
   <!-- Start Slider Area -->
-  <div id="home" class="slider slider-prlx">
+
+  <!-- <div id="home" class="slider slider-prlx">
     <div class="swiper-container parallax-slider">
       <div class="swiper-wrapper">
-        <!-- <div class="swiper-slide">
-          <div class="bg-img valign desktop"
-            data-background="assets/img/banner-1.jpeg?ver=13"
-            data-overlay-dark="5">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8 offset-lg-2 col-md-12">
-                  <div class="caption">
-                    <div class="home-button-box home-slider-btn" style="margin-top: 30px">
-                      <a href="#" id="formbutton" class="button-custom" data-toggle="modal"
-                        data-target="#floor-modal">Request For Brochure</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="bg-img valign mobile"
-            data-background="assets/img/banner-1.jpeg"
-            data-overlay-dark="5">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-8 offset-lg-2 col-md-12">
-                  <div class="caption">
-                    <div class="home-button-box home-slider-btn" style="margin-top: 30px">
-                      <a href="#" id="formbutton" class="button-custom" data-toggle="modal"
-                        data-target="#floor-modal">Request for Brochure</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
         <div class="swiper-slide">
-          <div class="bg-img valign" data-background="assets/img/banner-1.jpeg?ver=12" data-overlay-dark="5">
+          <div class="bg-img valign" data-background="assets/img/banner-1.jpg?ver=12" data-overlay-dark="5">
             <div class="container">
               <div class="row">
                 <div class="col-lg-8 offset-lg-2 col-md-12">
@@ -157,7 +129,6 @@
           </div>
         </div>
       </div>
-      <!-- slider setting -->
       <div class="control-text">
         <div class="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer">
           <span class="arrow prv"></span>
@@ -168,7 +139,42 @@
       </div>
       <div class="swiper-pagination"></div>
     </div>
+  </div> -->
+
+
+  <div id="home">
+    <div>
+      <div>
+        <div>
+          <div class="bg-img valign"  style="height: 850px;" data-background="assets/img/banner-1.jpg?ver=12" data-overlay-dark="5">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-md-12">
+                  <div class="caption"
+                    style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                    <h1 class="text-6xl" style="font-weight: 700; margin-bottom: 20px;">Rohan Nidita</h1>
+                    <h3 style="text-align: center;">
+                      Rohan Group Presents Brand New Upcoming Launch At Central Hinjawadi, Pune. It is Perfectly Planned
+                      Homes that are a class apart Reimagining the way of life. Rohan Nidita being 8 Acres land parcel
+                      in Central Hinjawadi, Pune Rohan Nandita Pune Presents Luxurious 2, 2.5 and 3 BHK Residences with
+                      world class lifestyle amenities. Brings you homes that come with a clever touch with intelligent
+                      planning of space, beautiful interiors and high-quality fittings.
+                    </h3>
+                    <div class="home-button-box home-slider-btn">
+                      <a href="#" id="formbutton" class="button-custom" data-toggle="modal"
+                        data-target="#floor-modal">Request For Brochure</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
+
   <!-- End Slider Area -->
   <!-- Start About Section -->
   <section id="about" class="about-area section-padding">
@@ -346,7 +352,7 @@
               <a id="formbutton" href="javascript:void(0)" class="project-overlay-info" data-toggle="modal"
                 data-target="#floor-modal">
                 <h5>2 BHK</h5>
-                <button class="button">Enquire Now</button>
+                <button id="button_customizable">Enquire Now</button>
               </a>
             </div>
             <div class="project-single-item">
@@ -356,7 +362,7 @@
               <a id="formbutton" href="javascript:void(0)" class="project-overlay-info" data-toggle="modal"
                 data-target="#floor-modal">
                 <h5>3 BHK</h5>
-                <button class="button">Enquire Now</button>
+                <button id="button_customizable">Enquire Now</button>
               </a>
             </div>
             <div class="project-single-item">
@@ -366,10 +372,17 @@
               <a id="formbutton" href="javascript:void(0)" class="project-overlay-info" data-toggle="modal"
                 data-target="#floor-modal">
                 <h5>3D View</h5>
-                <button class="button">Enquire Now</button>
+                <button id="button_customizable">Enquire Now</button>
               </a>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <button class="button" id="formbutton" data-toggle="modal" data-target="#floor-modal">
+            See Floor Plans
+          </button>
         </div>
       </div>
     </div>
@@ -457,7 +470,7 @@
     </div>
   </section>
 
-  <section id="about" class="p-10">
+  <section id="location" class="p-10">
     <div class="container">
       <div class="about_container">
         <div class="w-full md:w-1/2 md:pr-10 wow fadeInUp" data-wow-delay="0.2s">
@@ -515,7 +528,7 @@
       <div class="row">
         <div class="col-lg-10 offset-lg-1 col-md-12">
           <div class="row">
-            <div class="col-lg-6 col-md-12">
+            <div class="col-lg-6 col-md-12" style="display: grid; align-items: center;">
               <div class="contact-store-location-box text-center">
                 <div class="single-store-location">
                   <h3>Rohan Nidita</h3>
@@ -619,18 +632,9 @@
         </div>
         <div class="modal-body">
           <div class="row">
-            <div class="col-md-4 text-center">
-              <h3 class="text-center mb-5 text-3xl">Experience</h3>
-              <img src="assets/img/salesperson.jpeg" class="img-fluid saleimg" />
-              <h5 class="text-center" style="font-weight: 500">
-                Hassle Free <br />
-                Property Buying <br />
-                With Us
-              </h5>
-            </div>
-            <div class="col-md-8">
+            <div class="col-md-6">
               <div class="card-form">
-                <img src="assets/img/rohan-logo.png" class="img-fluid mb-20"
+                <img src="assets/img/rohan-logo.jpg" class="img-fluid mb-20"
                   style="width: 175px; height: auto; margin: 20px 0px" />
                 <form class="needs-validation" novalidate method="POST" action="form-action.php" id="modalForm"
                   onsubmit="reDirectToThankyou()">
@@ -905,10 +909,27 @@
                       class="form-control" required />
                   </div>
                   <div class="form-group">
-                    <input type="submit" class="btn btn-success" value="Enquire Now" />
+                    <input type="submit" class="btn btn-success" style="
+                    width: 100%;
+                " value="Enquire Now" />
                   </div>
                 </form>
               </div>
+            </div>
+            <div class="col-md-6 text-center">
+              <h3 class="text-center mb-5 text-5xl" style="
+              margin-top: 10px;
+          ">Experience</h3>
+              <img src="assets/img/salesperson.jpeg" style="
+              width: 61%;
+              align-items: center;
+              display: initial;
+          " class="img-fluid saleimg" />
+              <h5 class="text-center text-3xl" style="font-weight: 500; margin-top: 29px;">
+                Hassle Free <br />
+                Property Buying <br />
+                With Us
+              </h5>
             </div>
           </div>
         </div>

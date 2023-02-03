@@ -15,6 +15,20 @@
   flex-direction: row;
 }
 
+#button_customizable {
+  color: white;
+  border: 1px solid white;
+
+  padding-inline: 30px;
+  padding-block: 10px;
+}
+#button_customizable:hover {
+  color: black;
+  /* border: 1px solid #daaa73; */
+  border: 1px solid black;
+  padding-inline: 30px;
+  padding-block: 10px;
+}
 
 @media only screen and (max-width: 600px) {
   .contact_container {
