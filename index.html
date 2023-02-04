@@ -728,9 +728,6 @@
           required: true,
           email: true,
         },
-        countrycode: {
-          required: true,
-        },
         modalcontact: {
           required: true,
           number: true,
@@ -742,9 +739,6 @@
         },
         modalemail: {
           required: "Please Enter Your Email Id",
-        },
-        countrycode: {
-          required: "Please Select Country",
         },
         modalcontact: {
           required: "Please Enter Your Contact Number",
@@ -760,7 +754,6 @@
         var project = "78";
         var mobile = "9310863636,9819777057,9137692059";
         var toemail = "keystone.leads22@gmail.com";
-        var countrycode = $("#countrycode").val();
         var fromname = "Rohan Nidita";
         $.ajax({
           url: "https://neeadigital.com/crm/api/insert-lead",
@@ -778,7 +771,6 @@
             project: project,
             mobile: mobile,
             toemail: toemail,
-            countrycode: countrycode,
             fromname: fromname,
           },
           success: function (data) {
@@ -793,7 +785,6 @@
                 mobile: "9310863636,9819777057,9137692059",
                 email1: "keystone.leads22@gmail.com",
                 email2: "no-reply@neeadigital.com",
-                countrycode: $("#countrycode").val(),
               });
             }
           },
@@ -818,9 +809,8 @@
 
       var name = document.getElementById("modalname").value;
       var email = document.getElementById("modalemail").value;
-      var countrycode = document.getElementById("countrycode").value;
       var contact = document.getElementById("modalcontact").value;
-      if (name == "" || email == "" || countrycode == "" || contact == "") {
+      if (name == "" || email == "" || contact == "") {
         return false;
       }
       return window.open("thankyou.html", "_blank")
