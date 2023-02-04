@@ -805,6 +805,12 @@
     });
   </script>
   <script>
+    const form = document.getElementById("modalForm");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      form.reset();
+    });
     function reDirectToThankyou() {
 
       var name = document.getElementById("modalname").value;
@@ -813,6 +819,7 @@
       if (name == "" || email == "" || contact == "") {
         return false;
       }
+
       return window.open("thankyou.html", "_blank")
     }
   </script>
