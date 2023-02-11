@@ -5670,8 +5670,6 @@ a.close.disabled {
 }
 
   @media (max-width: 600px) {
-    .modal-content {
-      padding-top: 90px;}
 @media (min-width: 1200px) {
   .modal-xl {
     max-width: 1140px;
