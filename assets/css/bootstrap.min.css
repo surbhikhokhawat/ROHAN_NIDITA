@@ -5563,28 +5563,26 @@ a.close.disabled {
   content: none;
 }
 .modal-content {
-  /* position: relative; */
+  position: relative;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
-  overflow-y: scroll;
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   outline: 0;
-  padding-top: 70px;
 }
 .modal-backdrop {
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1040;
   width: 100vw;
-  overflow-y: scroll;
-  height: max-content;
+  height: 100vh;
   background-color: #000;
 }
 .modal-backdrop.fade {
@@ -5617,6 +5615,7 @@ a.close.disabled {
   position: relative;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  padding: 1rem;
 }
 .modal-footer {
   display: -ms-flexbox;
@@ -5669,6 +5668,10 @@ a.close.disabled {
     max-width: 800px;
   }
 }
+
+  @media (max-width: 600px) {
+    .modal-content {
+      padding-top: 70px;}
 @media (min-width: 1200px) {
   .modal-xl {
     max-width: 1140px;
