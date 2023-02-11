@@ -5615,7 +5615,6 @@ a.close.disabled {
   position: relative;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  padding: 1rem;
 }
 .modal-footer {
   display: -ms-flexbox;
