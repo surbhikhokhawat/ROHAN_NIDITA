@@ -829,6 +829,10 @@
   </div>
 
   <div class="modal fade apartment-selector" id="floor-modal" tabindex="-1" role="dialog">
+    <button onclick="handleToggleModel(true)"
+    class="absolute flex items-center justify-center w-10 h-10 top-2 right-2 bg-white rounded-full p-3 shadow-lg">
+    x
+  </button>
     <div class="modal-dialog responsive_modal" role="document">
       <div class="modal-content">
         <div class="modal-header text-center">
@@ -845,7 +849,7 @@
               <div class="card-form">
                 <img src="assets/img/rohan-logo.jpg" class="img-fluid mb-3"
                   style="height: auto; margin-left: auto; margin-right: auto;" />
-                <form class="needs-validation" novalidate method="POST" action="form-action.php" id="modalForm"
+                <form class="needs-validation" validate method="POST" action="form-action.php" id="modalForm"
                   onsubmit="reDirectToThankyou()">
                   <input type="hidden" name="path" id="path" class="path" value="Arkade Earth Website" />
                   <div class="form-group">
