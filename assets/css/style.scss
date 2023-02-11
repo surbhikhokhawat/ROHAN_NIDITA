@@ -284,6 +284,7 @@ ul {
   transform: translateY(-98%);
   opacity: 1;
   visibility: visible;
+  z-index: 1000;
 }
 .back-to-top i:last-child {
   opacity: 0;
@@ -1701,7 +1702,7 @@ iframe {
   position: fixed;
   float: right;
   bottom: 100px;
-  right: -45px;
+  right: -98px;
   transform: rotate(-90deg);
   border-radius: 0px;
   font-size: 20px;

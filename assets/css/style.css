@@ -1903,7 +1903,7 @@ iframe {
   position: fixed;
   float: right;
   bottom: 100px;
-  right: -45px;
+  right: -92px;
   transform: rotate(-90deg);
   border-radius: 0px;
   font-size: 20px;
@@ -1971,6 +1971,10 @@ iframe {
   }
 }
 @media (min-width: 768px) {
+  .p-2 {
+    padding: 0.5rem;
+    margin-left: 200px;
+}
   .container,
 .container-md,
 .container-sm {

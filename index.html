@@ -361,7 +361,7 @@
               <a id="formbutton" href="javascript:void(0)" class="project-overlay-info" data-toggle="modal"
                 data-target="#floor-modal">
                 <h5>2 BHK</h5>
-                <button id="button_customizable">Enquire Now</button>
+                <button class="button" id="button_customizable">Enquire Now</button>
               </a>
             </div>
             <div class="project-single-item">
@@ -371,7 +371,7 @@
               <a id="formbutton" href="javascript:void(0)" class="project-overlay-info" data-toggle="modal"
                 data-target="#floor-modal">
                 <h5>3 BHK</h5>
-                <button id="button_customizable">Enquire Now</button>
+                <button class="button" id="button_customizable">Enquire Now</button>
               </a>
             </div>
             <div class="project-single-item">
@@ -381,7 +381,7 @@
               <a id="formbutton" href="javascript:void(0)" class="project-overlay-info" data-toggle="modal"
                 data-target="#floor-modal">
                 <h5>3D View</h5>
-                <button id="button_customizable">Enquire Now</button>
+                <button class="button" id="button_customizable">Enquire Now</button>
               </a>
             </div>
           </div>
@@ -485,7 +485,7 @@
         <div class="w-full md:w-1/2 md:pr-10 wow fadeInUp" data-wow-delay="0.2s">
           <div class="about-content">
             <div class="about-content-text">
-              <h2>Rohan Nidita</h2>
+              <h2>Location Insights</h2>
               <h5>
                 <i class="fa fa-arrow-circle-right"></i> 5 Mins from XION Mall
               </h5>
@@ -588,8 +588,40 @@
     </div>
   </section>
 
-  <footer class="footer-area">
+  <!-- <footer class="footer-area">
     <div class="container">
+      <form action="form-action.php" method="get"
+      class="flex flex-col space-y-5 mb-5 bg-gray-200 text-black p-5 md:p-10 rounded-xl">
+      <input placeholder="First Name" type="text" name="first_name" required
+        class="py-2 px-2 placeholder:text-black/50 placeholder:font-semibold font-semibold text-black" />
+      <input placeholder="Phone" type="text" name="phone" required
+        class="py-2 px-2 placeholder:text-black/50 placeholder:font-semibold font-semibold text-black" />
+      <input placeholder="Email" type="email" name="email" required
+        class="py-2 px-2 placeholder:text-black/50 placeholder:font-semibold font-semibold text-black" />
+      <select placeholder="Configuration" name="configuration" required
+        class="py-2 px-2 placeholder:text-black/50 placeholder:font-semibold font-semibold text-black/50">
+        <option value="">Configuration Looking For</option>
+        <option value="2bhk">2 BHK</option>
+        <option value="3bhk">3 BHK</option>
+      </select>
+
+      <select placeholder="Site Visit Availablity" name="site_visit_availablity" required
+        class="py-2 px-2 placeholder:text-black/50 placeholder:font-semibold font-semibold text-black/50">
+        <option value="">Site Visit Availablity?</option>
+        <option value="2bhk">Weekends</option>
+        <option value="3bhk">Weekdays</option>
+      </select>
+
+      <div>
+        <input type="checkbox" name="agree_to_contact" required id="agree_to_contact" />
+        <label for="agree_to_contact">I agreed to be contacted on Whatsapp</label>
+      </div>
+
+      <button type="submit" onclick="reDirectToThankyou()"
+        class="bg-brand-dark text-white px-5 py-2 font-semibold animate-btn">
+        Submit
+      </button>
+    </form>
       <div class="flex flex-col md:flex-row">
         <div class="text-left md:text-left">
           <div class="footer-copyright-text">
@@ -607,18 +639,180 @@
 
     <div class="stickyBtn">
       <a style="Z-index:10000;" data-toggle="modal" id="formbutton" data-target="#floor-modal"
-        data="Hurry, Register & Book now before the prices increase!!" class="btn btn-custom">Enquire Now</a>
+        data="Hurry, Register & Book now before the prices increase!!" class="button btn btn-custom">Schedule Site Visit</a>
+    </div>
+  </footer> -->
+  <div class="modal fade apartment-selector" id="floor-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog responsive_modal" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h2 class="text-xl md:text-3xl tracking-tight text-gray-900" style="font-weight: 500">
+            Hurry, Register & Book now before price rise!!
+          </h2>
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card-form">
+                <img src="assets/img/rohan-logo.jpg" class="img-fluid mb-3"
+                  style="height: auto; margin-left: auto; margin-right: auto;" />
+                <form class="needs-validation" novalidate method="POST" action="form-action.php" id="modalForm"
+                  onsubmit="reDirectToThankyou()">
+                  <input type="hidden" name="path" id="path" class="path" value="Arkade Earth Website" />
+                  <div class="form-group">
+                    <input type="text" name="modalname" id="modalname" placeholder="Name" class="form-control"
+                      required />
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="modalcontact" id="modalcontact" placeholder="Phone" class="form-control"
+                      required />
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="modalemail" id="modalemail" placeholder="Email" class="form-control"
+                      required />
+                  </div>
+
+                  <div class="form-group">
+                    <select class="form-control" name="project" id="project" required>
+                      <option value="">Configuration</option>
+                      <option value="91">2 BHK</option>
+                      <option value="971">3 BHK </option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <select class="form-control" name="availability" id="availability" required>
+                      <option value="">Site Visit Availability</option>
+                      <option value="91">WeekDays</option>
+                      <option value="971">WeekEnds</option>
+                    </select>
+                  </div>
+                  <div class="form-group checkbox_class">
+                    <input type="checkbox" name="check" id="check" required />
+                    <label for="check" style="
+                    margin-top: 5px;
+                    margin-left: 6px;
+                ">I agreed to be contacted on Whatsapp</label><br>
+                  </div>
+
+                  <div class="form-group">
+                    <input type="submit" class="btn btn-success" style="
+                    width: 100%;
+                " value="Enquire Now" />
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-6 text-center">
+              <h3 class="text-center text-2xl">Experience</h3>
+              <img src="assets/img/salesperson.jpeg" style="
+              width: 61%;
+              align-items: center;
+              display: initial;
+          " class="img-fluid saleimg" />
+              <h5 class="text-center text-lg md:text-2xl" style="font-weight: 500; margin-top: 15px;">
+                Hassle Free
+                Property Buying <br />
+                With Us
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end modal-content-->
+    </div>
+    <!--end modal-dialog-->
+  </div>
+  <!-- 0------0----------- -->
+  <footer class="w-full bg-dark text-white font-sans">
+    <div class="w-11/12 md:w-10/12  mx-auto flex flex-col md:flex-row md:gap-20 gap-10 py-10">
+      <div class="w-full md:w-5/12">
+        <h5 class="mb-5 text-center font-bold text-lg">
+          A STEP AHEAD. ASK TO OWN.
+        </h5>
+                        
+        <form action="form-action.php" method="POST" onsubmit="reDirectToThankyou()"
+          class="flex flex-col space-y-5 mb-5 bg-gray-200 text-black p-5 md:p-10 rounded-xl">
+          <input placeholder="First Name" type="text" name="first_name" required
+            class="py-2 px-2 placeholder:text-black/50 placeholder:font-semibold font-semibold text-black" />
+          <input placeholder="Phone" type="text" name="phone" required
+            class="py-2 px-2 placeholder:text-black/50 placeholder:font-semibold font-semibold text-black" />
+          <input placeholder="Email" type="email" name="email" required
+            class="py-2 px-2 placeholder:text-black/50 placeholder:font-semibold font-semibold text-black" />
+          <select placeholder="Configuration" name="configuration" required
+            class="py-2 px-2 placeholder:text-black/50 placeholder:font-semibold font-semibold text-black/50">
+            <option value="">Configuration Looking For</option>
+            <option value="2bhk">2 BHK</option>
+            <option value="3bhk">3 BHK</option>
+          </select>
+
+          <select placeholder="Site Visit Availablity" name="site_visit_availablity" required
+            class="py-2 px-2 placeholder:text-black/50 placeholder:font-semibold font-semibold text-black/50">
+            <option value="">Site Visit Availablity?</option>
+            <option value="2bhk">Weekends</option>
+            <option value="3bhk">Weekdays</option>
+          </select>
+
+          <div>
+            <input type="checkbox" name="agree_to_contact" required id="agree_to_contact" />
+            <label for="agree_to_contact">I agreed to be contacted on Whatsapp</label>
+          </div>
+          
+          <button type="submit"
+            class="bg-dark text-white px-4 py-2 font-semibold animate-btn">
+            Submit
+          </button>
+        </form>
+      </div>
+
+      <div
+        class="flex flex-col gap-5 text-center justify-start md:text-left w-full md:w-6/12 text-sm leading-7 md:pt-12">
+        <div class="h-20 flex text-center justify-center items-center md:justify-start w-full">
+          
+          <div class="h-20 flex text-center justify-center items-center md:justify-start w-full ">
+            <img src="/assets/img/rohan-logo.jpg" class="h-20 bg-white p-2" alt="logo" />
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row gap-5 md:gap-10">
+          <div class="w-full md:w-11/12">
+            <p class="mb-5">
+              <small class="text-white">Projects in Hinjewadi</small><br />
+              <small class="text-white">Rohan Group is a construction & real estate company with innovation at its core.
+                Founded in 1993, it aimed at building a healthier lifestyle for the city-dwellers and greater
+                sustainability for the ecosystem. The years that followed saw the company making several firsts in the
+                industry : all directed towards achieving this single-minded goal.
+                <a href="privacy-policy" target="_blank">
+                  Privacy Policy</a></small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full bg-brand-gray flex items-center justify-center text-center text-white py-1">
+      <small>
+        Copyright @2022. All Rights Reserved. Designed by Pinaka Digital
+        Technologies
+      </small>
+    </div>
+    <div class="stickyBtn">
+      <a style="Z-index:10000;" data-toggle="modal" id="formbutton" data-target="#floor-modal"
+        data="Hurry, Register & Book now before the prices increase!!" class="button btn btn-custom">Schedule Site Visit</a>
     </div>
   </footer>
+  <!-- 0-0-0-0-0-0-0-0-0 -->
+  
   <!-- ----- button-fixed----  -->
   <div style="background-color: black; z-index:1000;" class="h-20 items-stretch flex flex-row sticky bottom-0 left-0 right-0 bg-brand-dark text-lg">
     <div class="h-full w-3 bg-black"></div>
     <button
-      class="w-full flex items-center gap-3 justify-center text-center flex-col p-4 text-sm bg-brand-darker text-gray-300  focus:outline-none focus:ring-2 focus:ring-gray-200">
-      <a class="floating-whattsapp" href="https://wa.me/+918329632692?" title="Whattsapp Us on">
-        <i class="fa fa-whatsapp fa-2x" style="color: #25d366"></i>
-      </a>
-    </button>
+    class="w-full flex items-center gap-3 justify-center text-center flex-col p-4 text-sm bg-brand-darker text-gray-300  focus:outline-none focus:ring-2 focus:ring-gray-200"
+    onclick="handleToggleModel()">
+    <i class="fa fa-2x fa-th-large"></i>
+    <span>Enquire Now</span>
+  </button>
     <div class="h-full w-3 bg-white"></div>
     <button>
 
@@ -826,15 +1020,7 @@
       form.reset();
     });
     function reDirectToThankyou() {
-
-      var name = document.getElementById("modalname").value;
-      var email = document.getElementById("modalemail").value;
-      var contact = document.getElementById("modalcontact").value;
-      if (name == "" || email == "" || contact == "") {
-        return false;
-      }
-
-      return window.open("thankyou.html", "_blank")
+      window.open("thankyou.html", "_blank")
     }
   </script>
 </body>
