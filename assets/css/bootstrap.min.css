@@ -5563,7 +5563,7 @@ a.close.disabled {
   content: none;
 }
 .modal-content {
-  position: relative;
+  /* position: relative; */
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -5578,7 +5578,6 @@ a.close.disabled {
   outline: 0;
 }
 .modal-backdrop {
-  position: fixed;
   top: 0;
   left: 0;
   z-index: 1040;
